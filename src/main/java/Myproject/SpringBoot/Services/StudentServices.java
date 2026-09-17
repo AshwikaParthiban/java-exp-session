@@ -19,10 +19,12 @@ public class StudentServices {
     }
 
     public List<Student> getallstudent (){
+
         return  studentrepository.findAll();
     }
 
     public Student updatestudent (Student data){
+
         return studentrepository.save(data);
     }
 }
