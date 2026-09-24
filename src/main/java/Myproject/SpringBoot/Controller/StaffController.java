@@ -22,12 +22,15 @@ public class StaffController {
 
     @GetMapping("/getall")
     ResponseEntity <List<Staff>> getall(){
+
         return new ResponseEntity<>(staffservices.getallstaff(), HttpStatus.OK);
     }
+
     @PutMapping("/update")
     ResponseEntity <Staff> updatestudent(@RequestBody Staff data){
         return new ResponseEntity<>(staffservices.updatestaff(data), HttpStatus.ACCEPTED);
     }
+
     @GetMapping("getbyid/{id}")
     ResponseEntity<?> getbyId(@PathVariable long id){
         try{
